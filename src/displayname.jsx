@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
 
 const Displayname = () => {
-    const[firstName,setFirstName]=useState("");
-    const [lastName,setLastName]=useState("")
-    const [fullname, setFullName] = useState('');
+   const [names, setName] = useState({
+        fname : "",
+        lname : ""
+    });
+    const [fullname, setFullName] = useState("");
 
-    const trackFirstName=(e)=>{
-        setFirstName(e.target.value)
+    const trackName=(e)=>{
+          const {name, value} = e.target;
+        setName((b) => {
+            return {
+                ...b,
+                [name] : value
+            }
+        });
     }
-    const tarckLastName=(e)=>{
-        setLastName(e.target.value)
-    }
+   
+    
     const submit=(e)=>{
         e.preventDefault()
-      setFullName(firstName + " " + lastName)
+      setFullName(names.fname + " " + names.lname)
      
     }
   return (
@@ -21,10 +28,10 @@ const Displayname = () => {
      <div>
         <form onSubmit={submit}>
         First Name:
-        <input type="text" required value={firstName} onChange={trackFirstName} />
+        <input type="text" required value={names.fname} name="fname"onChange={trackName} />
         <br />
         Last Name:
-         <input type="text" required value={lastName} onChange={tarckLastName} />
+         <input type="text" required value={names.lname} name="lname"onChange={trackName}  />
          <br />
           <button type='submit'>Submit</button>
         </form>
