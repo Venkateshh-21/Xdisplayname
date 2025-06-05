@@ -16,23 +16,23 @@ const Displayname = () => {
      
     }
   return (
-    <div><h1>Full Name Display</h1>
+    <><h1>Full Name Display</h1>
      <div>
         <form onSubmit={submit}>
-        <label htmlFor="" >First Name:</label >
+        First Name:
         <input type="text" required value={firstName} onChange={trackFirstName} />
         <br />
-        <label htmlFor="">Last Name:</label>
+        Last Name:
          <input type="text" required value={lastName} onChange={tarckLastName} />
          <br />
-          <input type="submit" value="Submit" ></input>
+          <button type='submit'>Submit</button>
         </form>
         </div>
         <div>
           <p style={displayFName?{display:"inline"}:{display:"none"}}>Full Name:{` ${firstName} ${lastName}`}</p>
         </div>
        
-    </div>
+    </>
   )
 }
 
