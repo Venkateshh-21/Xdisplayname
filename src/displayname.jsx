@@ -30,7 +30,7 @@ const Displayname = () => {
         </form>
         </div>
         <div>
-         {fullname ? <p >Full Name:{` ${firstName} ${lastName}`}</p>:""}
+         {fullname ? <p >Full Name: {fullname}</p>:""}
         </div>
        
     </>
