@@ -21,10 +21,10 @@ const Displayname = () => {
      <div>
         <form onSubmit={submit}>
         First Name:
-        <input type="text" required value={firstName} onChange={trackFirstName} pattern='[A-Za-z]{3}'/>
+        <input type="text" required value={firstName} onChange={trackFirstName} />
         <br />
         Last Name:
-         <input type="text" required value={lastName} onChange={tarckLastName} pattern='[A-Za-z]{3}'/>
+         <input type="text" required value={lastName} onChange={tarckLastName} />
          <br />
           <button type='submit'>Submit</button>
         </form>
