@@ -19,13 +19,13 @@ const Displayname = () => {
     <div><h1>Full Name Display</h1>
      <div>
         <form onSubmit={submit}>
-        <label htmlFor=""style={{paddingRight:"18px",}} >First Name:</label >
+        <label htmlFor="" >First Name:</label >
         <input type="text" required value={firstName} onChange={trackFirstName} />
         <br />
-        <label htmlFor=""style={{paddingRight:"20px"}}>Last Name:</label>
+        <label htmlFor="">Last Name:</label>
          <input type="text" required value={lastName} onChange={tarckLastName} />
          <br />
-          <input type="submit" value="Submit" style={{marginTop:"10px"}} ></input>
+          <input type="submit" value="Submit" ></input>
         </form>
         </div>
         <div>
