@@ -20,7 +20,7 @@ const Displayname = () => {
     
     const submit=(e)=>{
         e.preventDefault()
-      setFullName(names.fname + " " + names.lname)
+      setFullName(`${names.fname} ${names.lname}`)
      
     }
   return (
@@ -28,10 +28,10 @@ const Displayname = () => {
      <div>
         <form onSubmit={submit}>
         First Name:
-        <input type="text" required value={names.fname} name="fname"onChange={trackName} />
+        <input type="text" required value={names.fname} name="fname" onChange={trackName} />
         <br />
         Last Name:
-         <input type="text" required value={names.lname} name="lname"onChange={trackName}  />
+         <input type="text" required value={names.lname} name="lname" onChange={trackName}  />
          <br />
           <button type='submit'>Submit</button>
         </form>
