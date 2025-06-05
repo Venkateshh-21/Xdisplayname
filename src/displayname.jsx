@@ -25,7 +25,7 @@ const Displayname = () => {
     }
   return (
     <><h1>Full Name Display</h1>
-     <div>
+     
         <form onSubmit={submit}>
         First Name:
         <input type="text" required value={names.fname} name="fname" onChange={trackName} />
@@ -35,10 +35,10 @@ const Displayname = () => {
          <br />
           <button type='submit'>Submit</button>
         </form>
-        </div>
-        <div>
+        
+        
          {fullname ? <p >Full Name: {fullname}</p>:""}
-        </div>
+        
        
     </>
   )
